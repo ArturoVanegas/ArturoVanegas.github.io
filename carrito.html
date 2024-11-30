@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <style>
+        :root {
+            --color-principal: #f28fb2;
+            --color-secundario: #ff7c8e;
+            --color-fondo: #f8e1d4;
+            --color-texto: #333;
+            --color-texto-claro: #fff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: var(--color-fondo);
+            color: var(--color-texto);
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: var(--color-principal);
+            color: var(--color-texto-claro);
+        }
+
+        header .logo img {
+            max-width: 120px;
+        }
+
+        header .menu ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        header .menu a,
+        header .acciones a {
+            color: var(--color-texto-claro);
+            text-decoration: none;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        header .menu a:hover,
+        header .acciones a:hover {
+            color: var(--color-secundario);
+            transform: translateY(-2px);
+        }
+
+        .contenido {
+            padding: 20px;
+        }
+
+        .carrito {
+            margin-top: 20px;
+        }
+
+        .carrito h2 {
+            font-size: 2rem;
+            color: var(--color-secundario);
+            margin-bottom: 20px;
+        }
+
+        .producto-carrito {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .producto-carrito img {
+            max-width: 80px;
+            height: auto;
+            margin-right: 15px;
+        }
+
+        .producto-carrito .descripcion {
+            flex-grow: 1;
+            font-size: 1rem;
+            color: var(--color-texto);
+        }
+
+        .producto-carrito .precio {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--color-secundario);
+        }
+
+        .producto-carrito .cantidad {
+            font-size: 1.2rem;
+        }
+
+        .producto-carrito button {
+            background-color: var(--color-secundario);
+            color: var(--color-texto-claro);
+            border: none;
+            padding: 5px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .producto-carrito button:hover {
+            background-color: var(--color-principal);
+            transform: translateY(-2px);
+        }
+
+        .total {
+            text-align: right;
+            margin-top: 20px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--color-secundario);
+        }
+
+        footer {
+            background-color: var(--color-principal);
+            color: var(--color-texto-claro);
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer .footer-logo img {
+            max-width: 120px;
+        }
+
+        footer .footer-nav ul {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        footer .footer-nav a,
+        footer .social a {
+            color: var(--color-texto-claro);
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        footer .footer-nav a:hover,
+        footer .social a:hover {
+            color: var(--color-secundario);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <!-- Encabezado -->
+    <header>
+        <div class="logo">
+            <!-- Envolvemos la imagen con un enlace a la página principal -->
+            <a href="index.html">
+                <img src="logo.png" alt="Logotipo de la tienda">
+            </a>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="hombre.html">Hombre</a></li>
+                <li><a href="mujer.html">Mujer</a></li>
+                <li><a href="pareja.html">Pareja</a></li>
+                <li><a href="ninos.html">Niños</a></li>
+            </ul>
+        </nav>
+        <div class="acciones">
+            <a href="login.html">Iniciar sesión</a>
+            <a href="carrito.html">Carrito</a>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="contenido">
+        <section class="carrito">
+            <h2>Carrito de Compras</h2>
+
+            <!-- Producto en el carrito -->
+            <div class="producto-carrito">
+                <img src="producto1.jpg" alt="Producto 1">
+                <div class="descripcion">
+                    <p>Vestido de baño producto 1</p>
+                    <p>Descripción breve del producto</p>
+                </div>
+                <div class="precio">$99.99</div>
+                <div class="cantidad">Cantidad: 1</div>
+                <button>Eliminar</button>
+            </div>
+
+            <!-- Producto en el carrito -->
+            <div class="producto-carrito">
+                <img src="producto2.jpg" alt="Producto 2">
+                <div class="descripcion">
+                    <p>Vestido de baño producto 2</p>
+                    <p>Descripción breve del producto</p>
+                </div>
+                <div class="precio">$89.99</div>
+                <div class="cantidad">Cantidad: 2</div>
+                <button>Eliminar</button>
+            </div>
+
+            <!-- Producto en el carrito -->
+            <div class="producto-carrito">
+                <img src="producto3.jpg" alt="Producto 3">
+                <div class="descripcion">
+                    <p>Vestido de baño producto 3</p>
+                    <p>Descripción breve del producto</p>
+                </div>
+                <div class="precio">$79.99</div>
+                <div class="cantidad">Cantidad: 1</div>
+                <button>Eliminar</button>
+            </div>
+
+            <!-- Total -->
+            <div class="total">
+                <p>Total: $259.97</p>
+                <button>Proceder al pago</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="footer-logo">
+            <img src="logo.png" alt="Logotipo">
+        </div>
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="acerca-de-nosotros.html">Acerca de nosotros</a></li>
+                <li><a href="politicas.html">Políticas</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="social">
+            <a href="https://www.facebook.com" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com" target="_blank">Instagram</a>
+            <a href="https://www.twitter.com" target="_blank">Twitter</a>
+        </div>
+    </footer>
+
+</body>
+</html>
